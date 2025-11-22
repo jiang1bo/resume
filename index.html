@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://jiangbos.top/wp-content/uploads/2024/08/favicon-32x32-1.png">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #4b6cb7;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .title {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+        
+        .contact-item i {
+            font-size: 18px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            color: #4b6cb7;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4b6cb7;
+        }
+        
+        .info-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .info-item p {
+            color: #555;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .skill-tag {
+            background: #eef2ff;
+            color: #4b6cb7;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #d0d9ff;
+        }
+        
+        .project {
+            margin-bottom: 25px;
+        }
+        
+        .project h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .project p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #555;
+            transition: transform 0.3s, color 0.3s;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            color: #4b6cb7;
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 8px;
+            background: #f0f4ff;
+            color: #4b6cb7;
+        }
+        
+        .social-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <link rel="shortcut icon" href="path/to/favicon.ico">
+            <h1>赵江波</h1>
+            <div class="title">python开发工程师</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>1573709XXXX</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:3044483124@qq.com">3044483124@qq.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>广东省-深圳市-宝安区</span>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <h2><i class="fas fa-user"></i> 个人信息</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>基本信息</h3>
+                    <p>性别：男</p>
+                    <p>年龄：25岁</p>
+                    <p>工作经验：3年</p>
+                </div>
+                <div class="info-item">
+                    <h3>求职意向</h3>
+                    <p>python开发工程师</p>
+                    <p>期望薪资：15-20K</p>
+                </div>
+                <div class="info-item">
+                    <h3>教育背景</h3>
+                    <p>本科 - 软件工程</p>
+                    <!-- <p>XX大学 (2016-2020)</p> -->
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-briefcase"></i> 工作经历</h2>
+            <div class="info-item">
+                <h3>高优电子科技有限公司 - linux开发工程师</h3>
+                <p>2023年7月 - 至今</p>
+                <p>负责公司核心产品的linux服务器开发与维护，使用flask框架开发响应式pyhton应用，优化页面性能，提升用户体验。</p>
+            </div>
+            <div class="info-item">
+                <h3>科磊互联网公司 - 前端实习生</h3>
+                <p>2022年7月 - 2013年10月</p>
+                <p>参与公司官网重构项目，使用HTML5、CSS3和JavaScript实现响应式布局，协助团队完成项目上线。</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-code"></i> 技能专长</h2>
+            <div class="skills">
+                
+                <!-- <span class="skill-tag">React</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Webpack</span> -->
+                
+                <span class="skill-tag">python</span>
+                <span class="skill-tag">flask</span>
+                <span class="skill-tag">linux</span>
+                <span class="skill-tag">java</span>
+                <span class="skill-tag">微服务</span>
+                <span class="skill-tag">mysql</span>
+                <span class="skill-tag">redis</span>
+                <span class="skill-tag">nginx</span>
+                <span class="skill-tag">nmap</span>
+                <span class="skill-tag">wireshark</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">php</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">HTML5/CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">响应式设计</span>
+                <span class="skill-tag">UI/UX设计</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-project-diagram"></i> 项目经验</h2>
+            <div class="project">
+                <h3>企业级管理系统</h3>
+                <p>使用Vue.js + Element UI开发，负责前端架构设计和核心模块实现，优化首屏加载时间至1.5秒内。</p>
+            </div>
+            <div class="project">
+                <h3>电商平台前端重构</h3>
+                <p>主导项目重构，采用组件化开发模式，提升代码复用率30%，页面性能提升25%。</p>
+            </div>
+            <div class="project">
+                <h3>移动端H5应用</h3>
+                <p>使用Vant UI开发移动端应用，实现与原生应用相近的用户体验，支持离线功能。</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-link"></i> 社交媒体</h2>
+            <div class="social-links">
+                <!-- <a href="https://jiangbos.top" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-blog"></i>
+                    </div>
+                    <span class="social-name">blog</span>
+                </a> -->
+                <a href="https://github.com/jiang1bo" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span class="social-name">GitHub</span>
+                </a>
+                <a href="https://jiangbos.top" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <span class="social-name">BLOG</span>
+                </a>
+                <a href="https://space.bilibili.com/500302180?spm_id_from=333.1007.0.0" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-bilibili"></i>
+                    </div>
+                    <span class="social-name">Bilibili</span>
+                </a>
+                <a href="mailto:3044483124@qq.com" class="social-link">
+                    <div class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="social-name">邮箱</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillTags = document.querySelectorAll('.skill-tag');
+            
+            skillTags.forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.2s';
+                });
+                
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
